@@ -1,1 +1,1 @@
-# fronted
+# Shoe ecom frontend
