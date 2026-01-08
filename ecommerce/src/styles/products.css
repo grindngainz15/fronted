@@ -1,0 +1,266 @@
+/* ================= ROOT ================= */
+.product-page-container {
+  display: flex;
+  background: #f8f9fb;
+  min-height: 100vh;
+}
+
+/* ================= CONTENT ================= */
+.product-content {
+  flex: 1;
+  padding: 24px;
+}
+
+/* ================= HEADER ================= */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.page-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ================= HEADER ACTIONS ================= */
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.currency-toggle-btn,
+.add-product-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.currency-toggle-btn {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.add-product-btn {
+  background: #111827;
+  color: white;
+}
+
+/* ================= SEARCH ================= */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.search-bar button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= GRID ================= */
+.home-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* ================= FK CARD ================= */
+.fk-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.fk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.fk-img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fk-img-box img {
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.fk-card:hover .fk-img-box img {
+  transform: scale(1.05);
+}
+
+.fk-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fk-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.fk-rating {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.fk-rating span {
+  color: #888;
+}
+
+.fk-price {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.fk-price del {
+  color: #888;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.fk-off {
+  background: #feee00;
+  color: #111827;
+  padding: 2px 6px;
+  font-size: 11px;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+
+.fk-cart-btn {
+  width: 100%;
+  padding: 8px;
+  background: #feee00;
+  color: #111827;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: auto;
+}
+
+.fk-cart-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= ACTION BUTTONS ================= */
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.edit-btn {
+  flex: 1;
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 6px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn {
+  flex: 1;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 6px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================= LOADING ================= */
+.loading-text {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
